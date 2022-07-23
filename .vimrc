@@ -72,23 +72,27 @@ call plug#begin('~/.vim/bundle') "Начать искать плагины в э
 "Тут будут описаны наши плагины
 
 Plug 'ErichDonGubler/vim-sublime-monokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'octol/vim-cpp-enchanced-highlight'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 "Plug 'jpalardy/vim-slime'
 Plug 'scrooloose/nerdtree'
+Plug 'pandark/42header.vim'
+
 call plug#end() "Перестать это делать
 
 "Выбираем тему
-colorscheme sublimemonokai
+"colorscheme sublimemonokai
 
 "Для airline
-"let g:airline_powerline_fonts = 1 "Включить поддержку Powerline шрифтов
-"let g:airline#extensions#keymap#enabled = 0 "Не показывать текущий маппинг
-"let g:airline_section_z = \ue0a1:%l/%L Col:%c" "Кастомная графа положения курсора
-"let g:Powerline_symbols='unicode' "Поддержка unicode
-"let g:airline#extensions#xkblayout#enabled = 0 "Про это позже расскажу
+let g:airline_powerline_fonts = 1 "Включить поддержку Powerline шрифтов
+let g:airline#extensions#keymap#enabled = 0 "Не показывать текущий маппинг
+let g:airline_section_z = "\ue0a1:%l/%L Col:%c" "Кастомная графа положения курсора
+let g:Powerline_symbols='unicode' "Поддержка unicode
+let g:airline#extensions#xkblayout#enabled = 0 "Про это позже расскажу
 
-"set	guifont=devicons:h16
+set	guifont=devicons:h16
 
 if has("mac")
     "Mac
@@ -105,7 +109,7 @@ elseif has("linux")
 end
 
 nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
-
+nnoremap <C-n>  :NERDTree<CR>
+nnoremap <C-t>  :NERDTreeToggle<CR>
+nnoremap <C-f>  :NERDTreeFind<CR>
+nmap <f1>       :FortyTwoHeader<CR>
