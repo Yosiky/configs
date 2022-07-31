@@ -24,7 +24,7 @@ set	expandtab
 set mouse=a
 
 set ignorecase
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 set guioptions= "Отключаем панели прокрутки в GUI
 set showtabline=0 "Отключаем панель табов (окошки FTW)
