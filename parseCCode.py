@@ -27,7 +27,7 @@ for line in fdIn:
         elif minusTab != -1:
             count -= 1
     if (line[:2] == "//"):
-        fdOut.write(line)
+        fdOut.write(line + "\n")
     else:
         fdOut.write((space * (count - flag)) + line + "\n")
 
