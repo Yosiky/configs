@@ -47,7 +47,7 @@ set shiftwidth=4                " An indent is 4 spaces
 set showcmd                     " Show command being typed
 set showmatch                   " Show matching bracket
 set noswapfile                  " No *.swp files
-set number relativenumber       " Show line numbers
+set number                      " Show line numbers
 set numberwidth=3               " Number column width
 set matchtime=3                 " Time to show matching bracket
 set mouse=a                     " enable mouse
@@ -59,7 +59,6 @@ set incsearch                   " Incremental search: search-as-type
 set laststatus=2                " Always show status bar
 set lazyredraw                  " Don't redraw while executing macros
 set linebreak                   " Wrap lines at convenient points instead of last screen character
-set list listchars=tab:\|─,trail:·,nbsp:↔ " Display nonprintable characters
 set gdefault                    " g flag by default in substitutions
 set grepprg=rg\ --vimgrep\ -g\ \!tags
 set grepformat=%f:%l:%c:%m
@@ -96,6 +95,7 @@ let &t_EI.="\e[1 q" "EI = нормальный режим
 colorscheme dracula
 
 nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-t>  :NERDTreeToggle<CR>
 nmap <f1>       :FortyTwoHeader<CR>
 let g:user42 = 'eestelle'
 
