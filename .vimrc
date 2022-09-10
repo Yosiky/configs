@@ -1,7 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-syntax on
-" set the runtime path to include Vundle and initialize
+syntax on " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -20,9 +19,9 @@ Plugin 'vim-scripts/AutoComplPop'
 Plugin 'preservim/nerdtree'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-set background=dark
 autocmd vimenter * ++nested colorscheme dracula
-let g:solarized_termtrans = 0 
+let g:solarized_termtrans = 0
+let g:dracula_colorterm = 0
 
 Plugin 'rust-lang/rust.vim'
 execute pathogen#infect()
@@ -86,17 +85,6 @@ set breakindent                 " for wrapping, continue at indent instead of st
 set cindent                     " C-style autoindenting
 set belloff=all
 
-" Navigate the complnnete menu items like CTRL+n / CTRL+p would.
-inoremap <expr> <Down> pumvisible() ? "<C-n>" :"<Down>"
-inoremap <expr> <Up> pumvisible() ? "<C-p>" : "<Up>"
-
-" Select the complete menu item like CTRL+y would.
-inoremap <expr> <Right> pumvisible() ? "<C-y>" : "<Right>"
-inoremap <expr> <CR> pumvisible() ? "<C-y>" :"<CR>"
-
-" Cancel the complete menu item like CTRL+e would.
-inoremap <expr> <Left> pumvisible() ? "<C-e>" : "<Left>"
-
 if (&t_Co > 8 || has("gui_running")) && !exists("syntax_on")
 	syntax on
 endif
@@ -105,13 +93,9 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let &t_SI.="\e[5 q" "SI = режим вставки
 let &t_SR.="\e[3 q" "SR = режим замены
 let &t_EI.="\e[1 q" "EI = нормальный режим
-set background=dark
 colorscheme dracula
 
 nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n>  :NERDTree<CR>
-nnoremap <C-t>  :NERDTreeToggle<CR>
-nnoremap <C-f>  :NERDTreeFind<CR>
 nmap <f1>       :FortyTwoHeader<CR>
 let g:user42 = 'eestelle'
 
