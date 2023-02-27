@@ -52,6 +52,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ntk148v/vim-horizon'
+Plug '42Paris/42header'
 
 call plug#end()
 
@@ -102,3 +103,7 @@ let g:lightline.colorscheme = 'horizon'
 let g:lightline = {'colorscheme' : 'horizon'}
 
 :set colorcolumn=100
+
+" ecole 42 header
+let g:user42 = 'eestelle'
+let g:mail42 = 'yosiky@list.ru'
