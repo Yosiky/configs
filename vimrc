@@ -51,6 +51,7 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ntk148v/vim-horizon'
 
 call plug#end()
 
@@ -89,3 +90,15 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <Leader>t :NERDTreeToggle<CR>
 
 autocmd BufWritePre * :%s/\s\+$//e
+
+" horizon line
+set termguicolors
+
+" lightline
+let g:lightline = {}
+let g:lightline.colorscheme = 'horizon'
+
+" or this line
+let g:lightline = {'colorscheme' : 'horizon'}
+
+:set colorcolumn=100
