@@ -40,6 +40,12 @@ set smartcase               " smart case in search
 set hlsearch                " highlight in search
 set incsearch               " show first accurance while searching
 
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/bundle')
 
 Plug 'vim-airline/vim-airline'
@@ -47,7 +53,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'joom/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'ayu-theme/ayu-vim'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -65,25 +70,6 @@ let ayucolor="light"  " for light version of theme
 let ayucolor="mirage" " for mirage version of theme
 let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
-
-" youcompleteme
-let g:ycm_auto_trigger=1
-set completeopt-=preview
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_add_preview_to_completeopt = 0
-
-let g:ycm_complete_in_comments = 1
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-let g:ycm_min_num_of_chars_for_completion=1
-
-nnoremap <F4> :YcmDiags<CR>
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-nnoremap <C-g> :YcmCompleter GoTo<CR>
-nnoremap <C-t> :YcmCompleter GetType<CR>
-nnoremap <Leader> :YcmCompleter GetDoc<CR>
-let g:ycm_clangd_binary_path = trim(system('brew --prefix llvm')).'/bin/clangd'
 
 " nordtree
 nnoremap <C-n> :NERDTree<CR>
