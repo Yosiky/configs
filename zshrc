@@ -101,9 +101,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # add your tools
-source /Users/eestelle/tools/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /Users/eestelle/tools/git-conf
-
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.eegitconfig
 
 # To define styles for nested brackets up to level 4
 ZSH_HIGHLIGHT_STYLES[bracket-level-1]='fg=blue,bold'
@@ -118,6 +117,3 @@ ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='bold'
 ZSH_HIGHLIGHT_STYLES[redirection]='fg=yellow,bold'
 ZSH_HIGHLIGHT_STYLES[arg0]='fg=green,bold'
 
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-
-PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
