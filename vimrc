@@ -40,12 +40,6 @@ set smartcase               " smart case in search
 set hlsearch                " highlight in search
 set incsearch               " show first accurance while searching
 
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 call plug#begin('~/.vim/bundle')
 
 Plug 'vim-airline/vim-airline'
@@ -140,4 +134,6 @@ map <Leader>b :Buffers<CR>
 map <Leader>l :Lines<CR>
 map <Leader>m :Marks<CR>
 map <Leader>r :Tags<CR>
+map <Leader>w :Windows<CR>
+map <Leader>a :Ag<CR>
 
