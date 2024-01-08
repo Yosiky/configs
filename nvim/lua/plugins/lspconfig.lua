@@ -4,11 +4,11 @@ local M = {
   dependencies = {
     { "folke/neoconf.nvim", cmd = "Neoconf", config = false, dependencies = { "nvim-lspconfig" } },
     { "folke/neodev.nvim", opts = {} },
-    "mason.nvim",
+    "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
   },
-  ---@class PluginLspOpts
-  opts = {
+  --@class PluginLspOpts
+ --[[  opts = {
     -- options for vim.diagnostic.config()
     diagnostics = {
       underline = true,
@@ -191,7 +191,15 @@ local M = {
         return not is_deno(root_dir)
       end)
     end
-  end,
+  end, ]]
 }
+
+M.config = function() 
+		vim.lsp.start({
+		name = 'clangd',
+		cmd = {'C', 'C++'},
+		root_dir = vim.fs.dirname(vim.fs.find({'setup.py', 'pyproject.toml'}, { upward = true })[1]),
+	})
+end
 
 return M
