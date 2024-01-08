@@ -23,5 +23,6 @@ require('lazy').setup(
 		require('plugins/comment'),
 		require('plugins/lualine'),
 		require('plugins/illuminate'),
+		require('plugins/todo-comments'),
 		-- require('plugins/lspconfig')
 	})
