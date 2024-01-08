@@ -20,6 +20,7 @@ require('lazy').setup(
 		require('plugins/neo-tree'),
 		require('plugins/trouble'),
 		require('plugins/nvim-autopairs'),
-		require('plugins/comment')
+		require('plugins/comment'),
+		require('plugins/lualine')
 		-- require('plugins/lspconfig')
 	})
