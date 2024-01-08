@@ -22,5 +22,6 @@ require('lazy').setup(
 		require('plugins/nvim-autopairs'),
 		require('plugins/comment'),
 		require('plugins/lualine'),
+		require('plugins/illuminate'),
 		-- require('plugins/lspconfig')
 	})
