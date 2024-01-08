@@ -17,5 +17,8 @@ require('lazy').setup(
 		require('plugins/telescope'),
 		require('plugins/cmp'),
 		require('plugins/colorscheme'),
-		require('plugins/neo-tree')
+		require('plugins/neo-tree'),
+		require('plugins/trouble'),
+		require('plugins/nvim-autopairs'),
+
 	})
