@@ -32,6 +32,7 @@ opt.number = true
 
 opt.cursorline = true
 opt.termguicolors = true
-opt.mouse = a
+
+g.mouse = a
 opt.encoding = 'utf-8'
 opt.swapfile = false
