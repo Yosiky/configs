@@ -15,7 +15,7 @@ local M = {
 -- todo
 
 M.config = function()
-	local lspconfig = require('lspconfig')
+--[[ 	local lspconfig = require('lspconfig')
 
 	-- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 	local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver' }
@@ -24,7 +24,7 @@ M.config = function()
 		-- on_attach = my_custom_on_attach,
 		capabilities = capabilities,
 	  }
-	end
+	end ]]
 
 	local cmp = require("cmp")
 	vim.opt.completeopt = { "menu", "menuone", "noselect" }

@@ -26,6 +26,6 @@ require('lazy').setup({
 	require('plugins/indent-blankline'),
 	-- { 'neovim/nvim-lspconfig' },
 	-- { 'williamboman/nvim-lsp-installer' },
-	-- TODO: need to install lsp { "folke/neodev.nvim", opts = {} } 
-	require('plugins/lspconfig')
+	-- TODO: need to install lsp. { "folke/neodev.nvim", opts = {} } 
+	-- TODO: right now it's not working. require('plugins/lspconfig')
 })
