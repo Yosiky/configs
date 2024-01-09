@@ -29,3 +29,9 @@ opt.completeopt = 'menuone,noselect'
 vim.cmd [[autocmd BufEnter * set fo-=c fo-=r fo-=o]]
 
 opt.number = true
+
+opt.cursorline = true
+opt.termguicolors = true
+opt.mouse = a
+opt.encoding = 'utf-8'
+opt.swapfile = false
