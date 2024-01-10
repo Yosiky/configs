@@ -17,7 +17,7 @@ require('lazy').setup({
 	require('plugins/cmp'),
 	require('plugins/colorscheme'),
 	require('plugins/neo-tree'),
-	require('plugins/trouble'),
+	-- require('plugins/trouble'),
 	require('plugins/nvim-autopairs'),
 	require('plugins/comment'),
 	require('plugins/lualine'),
