@@ -1,11 +1,11 @@
-local M = {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' }
-	
+return {
+	{
+		'nvim-lualine/lualine.nvim',
+		dependencies = { 'nvim-tree/nvim-web-devicons' },
+		config = function()
+			require('lualine').setup {
+				options = { theme = 'ayu_mirage' }
+			}
+		end
+	}
 }
-
-M.config = {
-	options = { theme = 'ayu_mirage' }
-}
-
-return M
