@@ -100,9 +100,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# add your tools
-source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.eegitconfig
+# eestelee custom value
+source ~/.config/ee-tools/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/ee-tools/git-conf
 
 # To define styles for nested brackets up to level 4
 ZSH_HIGHLIGHT_STYLES[bracket-level-1]='fg=blue,bold'
