@@ -9,6 +9,7 @@ vim.opt.splitbelow = true
 --[[ Дополнительные настройки ]]--
 -- Используем системный буфер обмена
 vim.opt.clipboard = 'unnamedplus'
+-- vim.g.clipboard=unnamedplus
 
 -- Отключаем дополнение файлов в конце
 vim.opt.fixeol = false
@@ -28,4 +29,3 @@ vim.g.mouse = a
 vim.opt.encoding = 'utf-8'
 vim.opt.swapfile = false
 
-vim.g.clipboard=unnamedplus
