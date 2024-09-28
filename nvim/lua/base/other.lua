@@ -29,3 +29,5 @@ vim.g.mouse = a
 vim.opt.encoding = 'utf-8'
 vim.opt.swapfile = false
 
+vim.opt.colorcolumn = "80"
+
