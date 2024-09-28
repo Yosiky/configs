@@ -1,9 +1,9 @@
 DEFAULT_CONFIG_DIR	=	~/.config
 TOOL_DIR			=	$(DEFAULT_CONFIG_DIR)/ee-tools
 
-.PHONY: all linux macos
+.PHONY: all ee-tools linux macos
 
-all:
+all: ee-tools
 	echo "Type 'make macos' for configure macos"
 	echo "Type 'make linux' for configure macos"
 
